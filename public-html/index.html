@@ -12,5 +12,20 @@ body  {
 <p><h3>Click here to <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=120696d0-b0fc-402d-a583-e67571c7bb14&serviceInstanceID=ede5a589-6df7-4928-9eeb-7dd8d859b216" target="_blank">place your order</a> for additional information!</h3></p>
 </p>
 <p>PLEASE NOTE: This is pre-release documentation, under construction, and subject to change significantly before release.</p>
+
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "08642bc1-7afe-404a-b41b-77ab7a2c01e0", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "ede5a589-6df7-4928-9eeb-7dd8d859b216", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 </body>
 </html>
