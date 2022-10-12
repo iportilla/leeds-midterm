@@ -11,13 +11,37 @@ git clone https://github.com/iportilla/leeds-midterm.git
 cd ~/leeds-midterm
 ```
 
-2. Build the docker image:
+2. Update the index.html page with your chatbot details:
+
+```bash
+nano (or vi) public-html/index.html
+```
+
+For example:
+
+```script
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "08642bc1-7afe-404a-b41b-77ab7a2c01e0", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "ede5a589-6df7-4928-9eeb-7dd8d859b216", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+```
+
+3. Build the docker image:
 
 ```bash
 make
 ```
 
-3. To stop and clean Docker image
+4. To stop and clean Docker image
 
 ```bash
 make stop
