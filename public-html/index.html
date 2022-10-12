@@ -3,27 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head><style>
 body  {
-
+  background-image: url("IBM-cloud.png");
   background-repeat:no-repeat;
 }
 </style></head>
-<body background="home1.png">
-
-
-<!--Update from here-->
-<script>
-  window.watsonAssistantChatOptions = {
-      integrationID: "79585d5a-ec77-471a-aa4d-f2e00fd029e2", // The ID of this integration.
-      region: "us-south", // The region your integration is hosted in.
-      serviceInstanceID: "33234d5d-1376-4479-a882-b69e377df997", // The ID of your service instance.
-      onLoad: function(instance) { instance.render(); }
-    };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-    document.head.appendChild(t);
-  });
-</script>
-<!--To here-->
+<body>
+<h1>Welcome to Watson Pizzeria</h1>
+<p><h3>Click here to <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=120696d0-b0fc-402d-a583-e67571c7bb14&serviceInstanceID=ede5a589-6df7-4928-9eeb-7dd8d859b216" target="_blank">place your order</a> for additional information!</h3></p>
+</p>
+<p>PLEASE NOTE: This is pre-release documentation, under construction, and subject to change significantly before release.</p>
 </body>
 </html>
