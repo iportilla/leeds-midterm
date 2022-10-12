@@ -14,7 +14,14 @@ cd ~/leeds-midterm
 2. Build the docker image:
 
 ```bash
-make build
+make
+```
+
+3. To stop and clean Docker image
+
+```bash
+make stop
+make clean
 ```
 
 For example, when using the default values provided in this demo [hnz.json](https://raw.githubusercontent.com/jiportilla/Edge-Chatbot/master/horizon/hzn.json) configuration file:
