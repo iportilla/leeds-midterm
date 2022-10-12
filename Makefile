@@ -52,7 +52,7 @@ check:
 
 stop:
 	-docker rm -f $(DOCKER_NAME) 2> /dev/null || :
-	-docker stop $(DOCKER_NAME)
+	-docker stop $(CHATBOT_NAME)
 
 
 # Push the docker image to the registry. You must have write access to the docker hub openhorizon user
