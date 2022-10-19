@@ -35,13 +35,26 @@ For example:
 </script>
 ```
 
-3. Build the docker image:
+3. Update the host port number in Makefile
+
+```bash
+nano (or vi) .../leeds-midterm/Makefile
+
+
+# BAIM 4200
+#Update port number to any in the 80-88 range
+export PORT ?= 80
+
+
+```
+
+4. Build the docker image:
 
 ```bash
 make
 ```
 
-4. To stop and clean Docker image
+5. To stop and clean Docker image
 
 ```bash
 make stop
@@ -53,3 +66,60 @@ For example, when using the default values provided in this demo [hnz.json](http
 ```bash
 docker build -t iportilla/chatbot_amd64:1.0.0 -f ./Dockerfile.amd64 .
 ```
+
+
+## Docker 101
+
+1. Test your `docker` installation by running the following command:
+
+	`docker run hello-world`
+	
+	You will see:
+	
+	```
+	Hello from Docker.
+	This message shows that your installation appears to be working correctly.
+	...
+	
+	```
+	
+### Hello World
+
+2. Next, we are going to run a `Busybox` container on our system and get a taste of the `docker run` command. To get started, let's run the following in our terminal:.
+
+	```
+	docker pull busybox
+	```
+	You will see:
+	
+	```	
+	Using default tag: latest
+	latest: Pulling from library/busybox
+	...
+	```
+
+	The `pull` command fetches the busybox image from the Docker registry and saves it to your system. You can use the docker images command to see a list of all images on your system.
+	
+	`docker images`
+
+3. Great! Let's now run a Docker container based on this image. Run the following command:
+
+ `docker run busybox echo "Hello World from busybox`
+
+4. Let's run a terminal in the busybox container with:
+
+ `docker run -it busybox /bin/sh`
+ 
+ Test you are running inside the container with:
+ 
+ `ls`
+ 
+ You will see:
+ 
+ ```
+bin   dev   etc   home  proc  root  sys   tmp   usr   var
+ ```
+ 
+ Exit the container
+ 
+ `exit`
