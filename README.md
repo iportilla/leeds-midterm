@@ -1,3 +1,18 @@
+<h1 align="center" style="border-bottom: none;">🔎 Docker 101 </h1>
+<h3 align="center">Docker is an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization on Linux..</h3>
+
+
+### Flow
+
+In this course, you'll follow a series of hands-on exercises that demonstrate how to use containers for your applications. You'll start with the basics: creating and running your first Docker containers. By the end of the course, you'll get a brief introduction to running containers in production.
+
+
+Enjoy the course!
+
+<h3>BAIM-4200</h3>
+</p>
+
+
 # Energy Savings Chatbot Example
 
 
